@@ -52,6 +52,28 @@ body {
   margin-left: 94px;
 }
 
+.portfolio-link::after {
+  content: "";
+  background-color: var(--brand-color);
+  width: 53px;
+  height: 4px;
+  border-radius: 2px;
+  display: block;
+  margin-top: 28px;
+  position: absolute;
+}
+
+.agencja-link::after {
+  content: "";
+  background-color: var(--brand-color);
+  width: 53px;
+  height: 4px;
+  border-radius: 2px;
+  display: block;
+  margin-top: 28px;
+  position: absolute;
+}
+
 .logo-and-links {
   display: flex;
   align-items: center;
@@ -262,6 +284,57 @@ ul {
   margin-top: 30px;
 }
 
+.is-hidden {
+  pointer-events: none;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.is-hidden .modal {
+  transform: scale(0);
+}
+
+.modal {
+  background-color: rgba(0, 0, 0, 0.2);
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: scale(1);
+  transition: 0.2s ease-in;
+}
+
+.button-close {
+  position: absolute;
+  box-sizing: border-box;
+  cursor: pointer;
+  top: 8px;
+  right: 8px;
+  background-color: var(--background-white);
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.window-modal {
+  background-color: var(--background-white);
+  position: absolute;
+  width: 528px;
+  height: 581px;
+  border-radius: 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .what-we-do {
   margin-top: -94px;
 }
@@ -316,6 +389,26 @@ ul {
 .lorem-list {
   display: flex;
   gap: 30px;
+}
+
+.whatwedo-list {
+  position: relative;
+  display: inline-flex;
+}
+
+.whatwedo-description {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  text-align: center;
+  color: var(--background-white);
+  position: absolute;
+  background-color: rgba(47, 48, 58, 0.8);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 70px;
+  padding: 27px;
 }
 
 .description-lorem-ipsum {
